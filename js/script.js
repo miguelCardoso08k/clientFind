@@ -4,7 +4,6 @@ const resultsTable = document.getElementById("resultsTable");
 const exportButton = document.getElementById("exportButton");
 const tableBody = resultsTable.querySelector("tbody");
 
-
 const API_KEY = "AIzaSyASQTZeAMwDZSVLR9u3Yjis-3xl_Kpo5-s";
 const CX = "b025e4ddfe79b49eb";
 
@@ -29,6 +28,7 @@ async function fetchGoogleResults(query) {
   try {
     const response = await fetch(url);
     const data = await response.json();
+    console.log(data);
     return data.items.map((item) => ({
       title: item.title,
       snippet: item.snippet,
