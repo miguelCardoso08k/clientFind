@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br>
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,24 +18,28 @@
       </button>
     </form>
     <div id="resultsContainer" class="mt-10">
-      <table id="resultsTable" class="table-auto border-collapse w-full hidden">
+       <button id="exportButton" 
+              class="bg-green-500 text-white px-4 py-2 rounded hidden">
+        Export to CSV
+      </button>
+      <table id="resultsTable" class="table-auto border-collapse w-full hidden mt-2">
         <thead>
           <tr class="bg-gray-200">
             <th class="border px-4 py-2">Nome</th>
             <th class="border px-4 py-2">Descrição</th>
+            <th class="border px-4 py-2">Telefone</th>
+            <th class="border px-4 py-2">Endereço</th>
             <th class="border px-4 py-2">Link</th>
           </tr>
         </thead>
         <tbody></tbody>
       </table>
-      <button id="exportButton" 
-              class="bg-green-500 text-white px-4 py-2 rounded mt-4 hidden">
-        Export to CSV
-      </button>
+     
     </div>
   </div>
-  <script src="js/script.js" type="module"></script>
-
+  <!-- use xlsx.full.min.js from version 0.20.3 -->
+<script lang="javascript" src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
+<script src="js/script.js"></script>  
 </body>
 </body>
 </html>
